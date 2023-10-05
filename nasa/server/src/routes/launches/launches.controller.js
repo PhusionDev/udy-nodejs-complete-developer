@@ -29,6 +29,11 @@ const httpAddNewLaunch = (req, res) => {
   return res.status(201).json(launch);
 };
 
+const httpAbortLaunch(req, res) => {
+  const launchId = Number(req.params.id);
+
+}
+
 module.exports = {
   httpGetAllLaunches,
   httpAddNewLaunch,
