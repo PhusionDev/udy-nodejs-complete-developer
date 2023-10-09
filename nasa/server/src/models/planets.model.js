@@ -45,8 +45,9 @@ const loadPlanetsData = () => {
   });
 };
 
-const getAllPlanets = () => {
-  return habitablePlanets;
+const getAllPlanets = async () => {
+  // return habitablePlanets;
+  return await planets.find({});
 };
 
 module.exports = {
