@@ -21,8 +21,9 @@ const existsLaunchWithId = (launchId) => {
   return launches.has(launchId);
 };
 
-const getAllLaunches = () => {
-  return Array.from(launches.values());
+const getAllLaunches = async () => {
+  // return Array.from(launches.values());
+  return await launchesDatabase.find({}, { _id: 0, __v: 0 });
 };
 
 async function saveLaunch(launch) {
